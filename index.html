@@ -55,8 +55,8 @@
         var text = texts[currentText];
         var displayText = document.getElementById("display-msg").innerText;
         if(currentChar < text.length-1) {
-          document.getElementById("display-msg").innerText = `${displayText}${[...text][currentChar]}`;
           currentChar++;
+          document.getElementById("display-msg").innerText = `${displayText.splice(-1)}${[...text][currentChar]}\u200B`;
         }
       }
       document.getElementById("about-you").addEventListener("click", function() {
