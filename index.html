@@ -55,7 +55,7 @@
         var text = texts[currentText];
         var displayText = document.getElementById("display-msg").innerText;
         if(currentChar < text.length-1) {
-          document.getElementById("display-msg").innerText = `${displayText}${text.charAt(currentChar)}`;
+          document.getElementById("display-msg").innerText = `${displayText}${[...text][currentChar]}`;
           currentChar++;
         }
       }
