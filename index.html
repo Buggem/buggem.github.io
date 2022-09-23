@@ -38,16 +38,18 @@
   <body>
     <h1>A little bit about me.</h1>
     <div>Hi there I'm Buggem...<br>Click one of these options and we'll have a chat.</div>
-    <div id="about-you" class="hover-red">ABOUT YOU</div>
+    <div id="about-me" class="hover-red">ABOUT YOU</div>
     <div id="about-coding" class="hover-red">ABOUT YOUR CODING</div>
+    <div id="personal-projects" class="hover-red">ABOUT YOUR CODING</div>
     <div id="pipis" class="hover-red">[[BIG SHOT]]</div>
     <div id="display-msg"></div>
     <script>
-      var texts = ["About me... well, let\'s just say I have been a\nGitHub vistor for a long time", "The languages I know include:\nJS, Python CSS, Java, Processing (kind of Java) and of course HTML.", "Congrats you found the secret pipis button!"];
+      var texts = ["About me... well, let\'s just say I have been a\nGitHub vistor for a long time", "The languages I know include:\nJS, Python CSS, Java, Processing (kind of Java) and of course HTML.", "Congrats you found the secret pipis button!", "I come up with new ideas a lot.\nThe problem is I quickly lose interest in them."];
       var inter = setInterval(function(){}, 100000);
       var currentChar = 0;
       var currentText = 0;
       function resetTextBox() {
+        clearInterval(inter);
         document.getElementById("display-msg").innerText = "";
         currentChar = 0;
       }
@@ -59,7 +61,7 @@
           currentChar++;
         }
       }
-      document.getElementById("about-you").addEventListener("click", function() {
+      document.getElementById("about-me").addEventListener("click", function() {
         resetTextBox();
         currentText = 0;
         inter = setInterval(scrollTextBox, 50);
@@ -72,6 +74,11 @@
       document.getElementById("pipis").addEventListener("click", function() {
         resetTextBox();
         currentText = 2;
+        inter = setInterval(scrollTextBox, 50);
+      });
+      document.getElementById("personal-projectz").addEventListener("click", function() {
+        resetTextBox();
+        currentText = 3;
         inter = setInterval(scrollTextBox, 50);
       });
     </script>
