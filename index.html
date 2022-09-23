@@ -17,7 +17,7 @@
         font-weight: normal;
         font-style: normal;
       }
-      @keyframes shaky {
+      @keyframes shakyanim {
         0% { transform: translate(1px, 1px); }
         10% { transform: translate(-1px, -1px); }
         20% { transform: translate(-1px, 0px); }
@@ -31,14 +31,14 @@
         100% { transform: translate(1px, -1px); }
       }
       .shaky {
-        animation: shaky 0.8s steps(1, end) infinite;
+        animation: shakyanim 0.8s steps(1, end) infinite;
       }
       .shakier {
-        animation: shaky 0.4s steps(1, end) infinite;
+        animation: shakyanim 0.4s steps(1, end) infinite;
       }
       .shakiest {
         font-size: 90px;
-        animation: shaky 0.2s steps(1, end) infinite;
+        animation: shakyanim 0.2s steps(1, end) infinite;
       }
       html {
         font-family: '8bitOperatorPlus-Bold';
@@ -68,7 +68,7 @@
     <div id="personal-projects" class="hover-red">PERSONAL CODING PROJECTS</div>
     <div id="cool-font" class="hover-red">COOL FONT</div>
     <div id="hire" class="hover-red">HIRING YOU</div>
-    <div id="pipis" class="hover-red">$p<span class="shaky">a</span>mt<span class="shakier">o</span>n G<span class="shaky">.</span> $p<span class="shakiest">a</span>mt<span class="shakier">o</span>n</div>
+    <div id="pipis" class="hover-red">$pamton G. $pamton</div>
     <br>
     <br>
     <div id="display-msg"></div>
