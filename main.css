@@ -39,16 +39,14 @@ html {
   background-color: black;
 }
 h1, h2, h3, h4, p, div {
-  font-family: '8bitOperatorPlus-Bold';
   text-align: center;
   color: white;
 }
 span {
-  font-family: '8bitOperatorPlus-Bold';
   text-align: center;
-  display: inline-block;
-  color: inherit;
-  font-size: inherit;
+  display: inline-block !important;
+  color: inherit !important;
+  font-size: inherit !important;
 }
 img {
   image-rendering: pixelated;
@@ -57,8 +55,8 @@ img {
   padding: 20px;
 }
 .hover-red {
-  color: white;
+  color: white !important;
 }
 .hover-red:hover {
-  color: red;
+  color: red !important;
 }
