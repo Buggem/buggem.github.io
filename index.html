@@ -18,6 +18,22 @@
     <br>
     <br>
     <div id="display-msg"></div>
+    <div id="secret">&#x200B;</div>
+    <script id="so-answer38796843">
+      /*
+       * Code from https://stackoverflow.com/a/38796843/
+       */
+      window.playSound = function(url) {
+        var ourAudio = document.createElement('audio'); // Create a audio element using the DOM
+        ourAudio.style.display = "none"; // Hide the audio element
+        ourAudio.src = url; // Set resource to our URL
+        ourAudio.autoplay = true; // Automatically play sound
+        ourAudio.onended = function() {
+          this.remove(); // Remove when played.
+        };
+        document.body.appendChild(audio);
+      };
+    </script>
     <script>
       var texts = ["About me... well, let\'s just say I have been a GitHub vistor for a long time.", "The languages I know include:\nJS, Python, CSS, Java, Processing (kind of Java) and of course HTML.", "Congrats you found the secret pipis button!", "I come up with new ideas a lot.\nThe problem is I quickly lose interest in them.", "Ah, you like the cool font?\nI took it from DELTARUNE.", "Hire me??\nSorry I\'m not looking for jobs at the moment."];
       var inter = setInterval(function(){}, 100000);
@@ -65,6 +81,12 @@
         resetTextBox();
         currentText = 5;
         inter = setInterval(scrollTextBox, 50);
+      });
+      document.getElementById("secret").addEventListener("click", function() {
+        playSound("https:\/\/deltarune.com\/assets\/audio\/midi-spamton.mp3");
+        var spamdance = document.createElement("img");
+        spamdance.src = "https:\/\/deltarune.com\/assets\/images\/coolgifs\/spamdance.gif";
+        document.getElementById("secret").appendChild(spamdance);
       });
     </script>
   </body>
