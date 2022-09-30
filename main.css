@@ -48,6 +48,7 @@ span {
   text-align: center;
   display: inline-block;
   color: inherit;
+  font-size: inherit;
 }
 .hover-red {
   color: white;
