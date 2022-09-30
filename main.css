@@ -50,6 +50,9 @@ span {
   color: inherit;
   font-size: inherit;
 }
+img {
+  image-rendering: pixelated;
+}
 #secret {
   padding: 20px;
 }
