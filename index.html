@@ -23,13 +23,14 @@
       /*
        * Code from https://stackoverflow.com/a/38796843/
        */
-      window.playSound = function(url) {
+      window.playSound = function(url, loop) {
         var ourAudio = document.createElement('audio'); // Create a audio element using the DOM
         ourAudio.style.display = "none"; // Hide the audio element
         ourAudio.src = url; // Set resource to our URL
         ourAudio.autoplay = true; // Automatically play sound
+        ourAudio.loop = loop;
         ourAudio.onended = function() {
-          this.remove(); // Remove when played.
+          if(!loop) { this.remove(); } // Remove when played.
         };
         document.body.appendChild(ourAudio);
       };
@@ -83,7 +84,7 @@
         inter = setInterval(scrollTextBox, 50);
       });
       document.getElementById("secret").addEventListener("click", function() {
-        playSound("https:\/\/deltarune.com\/assets\/audio\/midi-spamton.mp3");
+        playSound("https:\/\/deltarune.com\/assets\/audio\/midi-spamton.mp3", true);
         var spamdance = document.createElement("img");
         spamdance.src = "https:\/\/deltarune.com\/assets\/images\/coolgifs\/spamdance.gif";
         document.getElementById("secret").appendChild(spamdance);
