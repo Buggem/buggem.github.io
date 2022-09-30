@@ -50,6 +50,9 @@ span {
   color: inherit;
   font-size: inherit;
 }
+#secret {
+  padding: 20px;
+}
 .hover-red {
   color: white;
 }
