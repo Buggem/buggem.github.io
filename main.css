@@ -65,3 +65,7 @@ img {
 .hover-red:hover {
   color: red !important;
 }
+.hiddenlink {
+  color: inherit !important;
+  text-decoration: none;
+}
