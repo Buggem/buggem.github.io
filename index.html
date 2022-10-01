@@ -41,6 +41,7 @@
       var inter = setInterval(function(){}, 100000);
       var currentChar = 0;
       var currentText = 0;
+      var secretdance = false;
       function resetTextBox() {
         clearInterval(inter);
         document.getElementById("display-msg").innerText = "";
@@ -85,7 +86,10 @@
         inter = setInterval(scrollTextBox, 50);
       });
       document.getElementById("secret").addEventListener("click", function() {
-        playSound("https:\/\/deltarune.com\/assets\/audio\/midi-spamton.mp3", true);
+        if(!secretdance) {
+          playSound("https:\/\/deltarune.com\/assets\/audio\/midi-spamton.mp3", true);
+          secretdance = true;
+        }
         var spamdance = document.createElement("img");
         spamdance.src = "https:\/\/deltarune.com\/assets\/images\/coolgifs\/spamdance.gif";
         document.getElementById("secret").appendChild(spamdance);
