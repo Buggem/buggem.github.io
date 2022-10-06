@@ -143,11 +143,14 @@
     </SCRIPT>
     <SCRIPT>
       // I, THE VOICE AM PROUD OF MAKING MY FIRST JAVASCRIPT.
+      window.initMusicDone = false;
       window.addEventListener("load", function() {
         document.getElementById("SOUL").style.display = 'none';
         window.addEventListener("click", function() {
-          playSound("/ANOTHER HIM.mp3", true);
-          document.getElementById("SOUL").style.display = 'block';
+          if(initMusicDone) { 
+            playSound("/ANOTHER HIM.mp3", true);
+            document.getElementById("SOUL").style.display = 'block';
+          }       
         });
       });
     </SCRIPT>
