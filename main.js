@@ -1,4 +1,4 @@
-window.addEventListner("load", function() {
+window.addEventListener("load", function() {
   window.loadHiddenLinks = function() {
     var hiddenLinks = document.getElementsByClassName("veryhiddenlink");
     for(link of hiddenLinks) {
