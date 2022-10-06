@@ -49,11 +49,13 @@
   height: 100%;
 }
 h1, h2, h3, h4 {
+  width: 100%;
   display: inline-block !important;
   text-align: center;
   color: white;
 }
 p, div {
+  width: 100%;
   display: inline-block !important;
   text-align: center;
   color: white;
