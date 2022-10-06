@@ -147,9 +147,10 @@
       window.addEventListener("load", function() {
         document.getElementById("SOUL").style.display = 'none';
         document.documentElement.addEventListener("click", function() {
-          if(!initMusicDone) { 
+          if(!initMusicDone) {
             playSound("/ANOTHER HIM.mp3", true);
             document.getElementById("SOUL").style.display = 'block';
+            window.initMusicDone = true;
           }       
         });
       });
