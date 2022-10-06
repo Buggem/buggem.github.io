@@ -149,6 +149,11 @@
         document.documentElement.addEventListener("click", function() {
           if(!initMusicDone) {
             playSound("/ANOTHER HIM.mp3", true);
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: 'ANOTHER HIM',
+                artist: 'Toby Fox',
+                album: 'Deltarune Chapter 1 Soundtrack'
+            });
             document.getElementById("SOUL").style.display = 'block';
             window.initMusicDone = true;
           }       
