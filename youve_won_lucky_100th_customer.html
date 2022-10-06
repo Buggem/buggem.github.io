@@ -11,18 +11,20 @@
       #prize {
         font-size: 60pt !important;
         padding: 50px 20px !important;
-        background-color: linear-gradient(to bottom, #ffff00, #333300) !important;
+        background-image: linear-gradient(to bottom, #ffff00, #333300) !important;
         background-clip: text;
         color: transparent;
       }
     </style>
   </head>
   <body>
+    <div style="background-color: white;">
     <h2 style="color: red;">YOU'VE WON!</h2><br>
     <h4 style="color: red;">LUCKY 100 [[Customer]]!</h4><br>
     <p style="color: red;">YOU;VE WON A WONDERFUL</p>
     <br>
     <h1 id="prize"></h1>
+    </div>
     <script>
       var prizes = ['[[NETFRIX]] [SIBSCUPTION]', 'ONE-WAY TRIP TO BRAZIL', '[PIPIS]!!!', '50month [[PROTOGENT SIBSCRUPTION!]]', '[[THE BIG ONE]]', 'Spamton After Not Surving.', ' 1000 fREE [Kr0mer]', '[[Nothing]]?'];
       document.getElementById("prize").innerHTML = prizes[parseInt(Math.random() * (prizes.length+1))];
