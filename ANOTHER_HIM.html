@@ -110,16 +110,10 @@
 
           }
           BODY {
-              height: 300px;
-              text-align: center;  /* align the inline(-block) elements horizontally */
-              font: 0/0 a;         /* remove the gap between inline(-block) elements */
-          }
-
-          BODY:before {    /* create a full-height inline block pseudo=element */
-              content: ' ';
-              display: inline-block;
-              vertical-align: middle;  /* vertical alignment of the inline element */
-              height: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
           }
           #SOUL {
             animation: GLOW 5s steps(1, end) infinite;
