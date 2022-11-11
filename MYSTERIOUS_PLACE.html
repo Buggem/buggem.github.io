@@ -148,7 +148,7 @@
       var currentChar = 0;
       var currentText = 0;
       function keyPressNoise() {
-        playSound(`/key${parseInt(Math.random() * 6).toString()}.wav`, false);
+        playSound(`/key${(1+parseInt(Math.random() * 5)).toString()}.wav`, false);
       }
       function resetTextBox() {
         clearInterval(inter);
@@ -160,6 +160,7 @@
         var text = texts[currentText];
         var displayText = document.getElementById("text").innerText;
         if(currentChar < text.length) {
+          keyPressNoise();
           document.getElementById("text").innerText = `${displayText}${[...text][currentChar]}\u200B`; // zero-width space fixes spaces from being snipped off.
           currentChar++;
         }
