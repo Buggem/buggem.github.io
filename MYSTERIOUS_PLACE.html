@@ -147,12 +147,16 @@
       var texts = [ "Welcome to the edge of the world.\u200B\u200B\u200B\u200B\u200B\nClick on me and you will be lost in the page maze.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B Forever." ];
       var currentChar = 0;
       var currentText = 0;
+      function keyPressNoise() {
+        playSound(`/key${parseInt(Math.random() * 6).toString()}.wav`, false);
+      }
       function resetTextBox() {
         clearInterval(inter);
         document.getElementById("text").innerText = "";
         currentChar = 0;
       }
       function scrollTextBox() {
+        keyPressNoise();
         var text = texts[currentText];
         var displayText = document.getElementById("text").innerText;
         if(currentChar < text.length) {
