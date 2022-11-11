@@ -44,6 +44,7 @@
       };
     </script>
     <script>
+      var keysLog = '';
       var texts = ["About me... well, let\'s just say I have been a GitHub vistor for a long time.", "The languages I know include:\nJS, Python, CSS, Java, Processing (kind of Java) and of course HTML.", "Congrats you found the secret pipis button!", "I come up with new ideas a lot.\nThe problem is I quickly lose interest in them.", "Ah, you like the cool font?\nI took it from DELTARUNE.", "Hire me??\nSorry I\'m not looking for jobs at the moment."];
       var inter = setInterval(function(){}, 100000);
       var currentChar = 0;
@@ -102,6 +103,11 @@
         spamdance.src = "https:\/\/deltarune.com\/assets\/images\/coolgifs\/spamdance.gif";
         document.getElementById("secret").appendChild(spamdance);
       });
+      .addEventListener('keyup', (e) => {
+         if(!(e.key.length > 1)) {
+           keysLog += e.key;
+         }
+       });
     </script>
   </body>
 </html>
