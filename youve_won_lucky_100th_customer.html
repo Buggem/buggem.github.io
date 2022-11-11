@@ -44,6 +44,7 @@
         if(typeof window.rick_a !== "undefined") { return; }
         //window.location.href = window.cpl;
         window.rick_a = document.createElement('video'); // Create a video element using the DOM
+        rick_a.setAttribute("style", "pointer-events: none;");
         rick_a.src = rickwebm; // Set resource to our URL
         rick_a.autoplay = true; // Automatically play sound
         rick_a.loop = true;
