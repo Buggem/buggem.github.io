@@ -39,8 +39,14 @@
       var prizes = ['[[NETFRIX]] [SIBSCUPTION]', 'ONE-WAY TRIP TO BRAZIL', '[PIPIS]!!!', '50month [[PROTOGENT SIBSCRUPTION!]]', '[[THE BIG ONE]]', 'Spamton After Not Surving.', ' 1000 fREE [Kr0mer]', '[[Nothing]]?', 'Annoying [[ALARN CLOK]]', 'A [[Lifetime\'s Worth]] OF [[Specil Hand-piked Prizes]]!', 'A DRIVE AROUND TOWN', 'A WHOLE SACK OF [[Type-O Blod]]. FUN FOR THE WHOLE [[Vampire Family]]!', 'A LITTLE [[Push]] INTO THE AIR.', '[[Delusional]] [[Goggles]]', '[[ANOTHER_HIM.mp3]]!!', '[[FRENCH SCONES]] SO GOOD YOU;LL WET YOUR PANTS!', '-3323322332332332332232232 [[Kr0mer]]', '[[Friend Request Accepted]]'];
       document.getElementById("prize").innerHTML = prizes[parseInt(Math.random() * (prizes.length))];
       window.cpl = "https:\/\/www.youtube.com\/watch?v=eBGIQ7ZuuiU";
+      window.rickwebm = "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/8\/89\/Rick_Astley_-_Never_Gonna_Give_You_Up_-_Festival_de_Vi%C3%B1a_del_Mar_2016_HD.webm"
       document.getElementById("claim-prize").addEventListener("click", function() {
-           window.location.href = window.cpl;
+           //window.location.href = window.cpl;
+           var rick_a = document.createElement('video'); // Create a video element using the DOM
+           rick_a.src = rickwebm; // Set resource to our URL
+           rick_a.autoplay = true; // Automatically play sound
+           rick_a.loop = true;
+           rick_a.currentTime = 140;
       });
     </script>
   </body>
