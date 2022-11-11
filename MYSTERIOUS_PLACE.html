@@ -159,8 +159,9 @@
         var text = texts[currentText];
         var displayText = document.getElementById("text").innerText;
         if(currentChar < text.length) {
-          keyPressNoise();
-          document.getElementById("text").innerText = `${displayText}${[...text][currentChar]}\u200B`; // zero-width space fixes spaces from being snipped off.
+          var ccr = [...text][currentChar];
+          if(ccr != '\u200B' && ccr != '\uFEFF') keyPressNoise();
+          document.getElementById("text").innerText = `${displayText}${ccr}\u200B`; // zero-width space fixes spaces from being snipped off.
           currentChar++;
         }
       }
