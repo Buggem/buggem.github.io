@@ -103,12 +103,12 @@
         spamdance.src = "https:\/\/deltarune.com\/assets\/images\/coolgifs\/spamdance.gif";
         document.getElementById("secret").appendChild(spamdance);
       });
-      .addEventListener('keyup', (e) => {
-         if(!(e.key.length > 1)) {
-           keysLog += e.key;
-         }
-         if(keysLog.includes('fjjffj')) window.location.href = "https:\/\/buggem.github.io\/MYSTERIOUS_PLACE";
-       });
+      document.addEventListener('keyup', (e) => {
+        if(!(e.key.length > 1)) {
+          keysLog += e.key;
+        }
+        if(keysLog.includes('fjjffj')) window.location.href = "https:\/\/buggem.github.io\/MYSTERIOUS_PLACE";
+      });
     </script>
   </body>
 </html>
