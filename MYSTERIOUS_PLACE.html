@@ -156,7 +156,7 @@
         var text = texts[currentText];
         var displayText = document.getElementById("text").innerText;
         if(currentChar < text.length) {
-          document.getElementById("display-msg").innerText = `${displayText}${[...text][currentChar]}\u200B`; // zero-width space fixes spaces from being snipped off.
+          document.getElementById("text").innerText = `${displayText}${[...text][currentChar]}\u200B`; // zero-width space fixes spaces from being snipped off.
           currentChar++;
         }
       }
