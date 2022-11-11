@@ -26,7 +26,7 @@
     </style>
   </head>
   <body>
-    <div style="background-color: white;">
+    <div id='won-box' style="background-color: white;">
       <h2 style="color: red;">YOU'VE WON!</h2><br>
       <h4 style="color: red;">LUCKY 100 [[Customer]]!</h4><br>
       <p style="color: red;">YOU;VE WON A WONDERFUL</p>
@@ -41,12 +41,15 @@
       window.cpl = "https:\/\/www.youtube.com\/watch?v=eBGIQ7ZuuiU";
       window.rickwebm = "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/8\/89\/Rick_Astley_-_Never_Gonna_Give_You_Up_-_Festival_de_Vi%C3%B1a_del_Mar_2016_HD.webm"
       document.getElementById("claim-prize").addEventListener("click", function() {
+           if(typeof window.rick_a !== "undefined") { return; }
            //window.location.href = window.cpl;
-           var rick_a = document.createElement('video'); // Create a video element using the DOM
+           window.rick_a = document.createElement('video'); // Create a video element using the DOM
            rick_a.src = rickwebm; // Set resource to our URL
            rick_a.autoplay = true; // Automatically play sound
            rick_a.loop = true;
            rick_a.currentTime = 140;
+           document.getElementById("won-box").innerHTML = '';
+           document.getElementById("won-box").appendChild(rick_a);
       });
     </script>
   </body>
