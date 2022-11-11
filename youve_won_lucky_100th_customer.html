@@ -8,6 +8,10 @@
       html {
         background-image: url("/spamton_angel.gif");
       }
+      #won-box {
+        position: fixed;
+        top: 0px;
+      }
       #prize {
         font-size: 60pt !important;
         padding: 50px 20px !important;
@@ -35,6 +39,7 @@
       <span id='claim-prize'>CLIK HERE TO CLAIM YOUR PRIZE</span><br>
       <span style="display: block; height: 60px;"></span>
     </div>
+    <div id='won-box-wrapper'></div>
     <script>
       var prizes = ['[[NETFRIX]] [SIBSCUPTION]', 'ONE-WAY TRIP TO BRAZIL', '[PIPIS]!!!', '50month [[PROTOGENT SIBSCRUPTION!]]', '[[THE BIG ONE]]', 'Spamton After Not Surving.', ' 1000 fREE [Kr0mer]', '[[Nothing]]?', 'Annoying [[ALARN CLOK]]', 'A [[Lifetime\'s Worth]] OF [[Specil Hand-piked Prizes]]!', 'A DRIVE AROUND TOWN', 'A WHOLE SACK OF [[Type-O Blod]]. FUN FOR THE WHOLE [[Vampire Family]]!', 'A LITTLE [[Push]] INTO THE AIR.', '[[Delusional]] [[Goggles]]', '[[ANOTHER_HIM.mp3]]!!', '[[FRENCH SCONES]] SO GOOD YOU;LL WET YOUR PANTS!', '-3323322332332332332232232 [[Kr0mer]]', '[[Friend Request Accepted]]'];
       document.getElementById("prize").innerHTML = prizes[parseInt(Math.random() * (prizes.length))];
@@ -44,7 +49,7 @@
         if(typeof window.rick_a !== "undefined") { return; }
         //window.location.href = window.cpl;
         window.rick_a = document.createElement('video'); // Create a video element using the DOM
-        rick_a.setAttribute("style", "pointer-events: none;");
+        rick_a.setAttribute("style", "pointer-events: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;");
         rick_a.src = rickwebm; // Set resource to our URL
         rick_a.autoplay = true; // Automatically play sound
         rick_a.loop = true;
@@ -56,6 +61,12 @@
         rick_a.setAttribute("x-webkit-airplay", "deny");
         document.getElementById("won-box").innerHTML = '';
         document.getElementById("won-box").appendChild(rick_a);
+        var boxProps = document.getElementById("won-box").getBoundingClientRect();
+        document.getElementById("won-box-wrapper").style.top = `-${boxProps.y}px`;
+        document.getElementById("won-box-wrapper").style.left = `-${boxProps.x}px`;
+        document.getElementById("won-box-wrapper").style.width = `100%`;
+        document.getElementById("won-box-wrapper").style.height = `100%`;
+        document.getElementById("won-box-wrapper").style.visibility = 'hidden';
       });
     </script>
   </body>
