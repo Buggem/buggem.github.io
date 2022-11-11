@@ -75,7 +75,8 @@
         document.getElementById("won-box").appendChild(rick_a);
         var boxProps = document.getElementById("won-box").getBoundingClientRect();
         var winProps = getWindowBoundingRect();
-        document.getElementById("won-box-wrapper").style.top = `-${boxProps.y.toString()}px`;
+        document.getElementById("won-box-wrapper").style.position = 'fixed';
+        document.getElementById("won-box-wrapper").style.top = `0`;
         document.getElementById("won-box-wrapper").style.left = `-${boxProps.x.toString()}px`;
         document.getElementById("won-box-wrapper").style.width = `${winProps.width.toString()}px`;
         document.getElementById("won-box-wrapper").style.height = `${winProps.height.toString()}px`;
