@@ -1,6 +1,5 @@
 name: Include your Example.
 description: We would be happy for you to give us a example comic you made..
-title: ""
 labels: ["create-a-comic", "example"]
 assignees: 
   - 
@@ -18,5 +17,5 @@ body:
       label: Copyright Compliance
       description: Please do not copy works that you are unlicensed to.
       options:
-        - label: I consent that this work is either my own work or someone else's work used with permission
+        - label: I consent that this work is either my own work or someone elses work used with permission
           required: true
