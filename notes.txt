@@ -1,0 +1,2 @@
+NOTE_1- subroutine to erase save data :/
+NOTE_2- subroutine to write a variable to save
