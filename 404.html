@@ -1,19 +1,56 @@
 <!doctype html>
 <html>
   <head>
-    <title>HEY EVERY ​ ​ ​ ! ITS [[404]]. I DON'T NEED [[Mike]].</title>
+    <title>404 - Cake Not Found</title>
     <link href="/main.css" rel="stylesheet">
-      <meta property="og:title" content="spamtons dumpster" />
-      <meta property="og:description" content="welcome to the pits of 404." />
+      <meta property="og:title" content="Cake Not Found" />
+      <meta property="og:description" content="Error 404" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://buggem.github.io/spamton_angel.gif" />
       <meta property="og:url" content="https://buggem.github.io/" />
     <script src="/injectFavicon.js"></script>
     <script src="/main.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5392855125777051"
-     crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1><span class="shakiest">T</span>H<a href='/secret' class='hiddenlink'><span class="shaky">AT</span></a>S A <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404" class="hiddenlink"><span class="shakiest">[[</span>F<span class="shakier">OUR</span>-O<span class="shaky">H-</span>F<span class="shakier">OU</span>R]<span class="shaky">]</span></a> Y<span class="shakiest">OU</span> <span tvhl='https://buggem.github.io/ANOTHER_HIM' class="veryhiddenlink"><span class="shakier">[L</span>it<span class="shaky">tle</span> S<span class="shakiest">pon</span>g<span class="shakier">e]!</span></span></h1>
+    <img src="/Cake.webp" style="
+      width:30%;
+      left:50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: fixed;
+      text-align: center;
+    "/>
+    <script id="so-answer38796843">
+      /*
+       * Code from https://stackoverflow.com/a/38796843/
+       */
+      window.playSound = function(url, loop) {
+        var ourAudio = document.createElement('audio'); // Create a audio element using the DOM
+        ourAudio.style.display = "none"; // Hide the audio element
+        ourAudio.src = url; // Set resource to our URL
+        ourAudio.autoplay = true; // Automatically play sound
+        ourAudio.loop = loop;
+        ourAudio.onended = function() {
+          if(!loop) { this.remove(); } // Remove when played.
+        };
+        document.body.appendChild(ourAudio);
+      };
+    </script>
+    <script>
+      // Simillar to the other secret
+      window.initMusicDone = false;
+      window.addEventListener("load", function() {
+        document.documentElement.addEventListener("click", function() {
+          if(!initMusicDone) {
+            playSound("/Portal Radio.wav", true);
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: 'Still Alive (Radio Mix) - Clean',
+                artist: 'Aperture Science Psychoacoustic Laboratories',
+                album: 'Portal 2 Soundtrack'
+            });
+            window.initMusicDone = true;
+          }       
+        });
+      });
+    </script>
   </body>
 </html>
