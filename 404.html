@@ -2,23 +2,26 @@
 <html>
   <head>
     <title>404 - Cake Not Found</title>
-    <link href="/main.css" rel="stylesheet">
-      <meta property="og:title" content="Cake Not Found" />
-      <meta property="og:description" content="Error 404" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://buggem.github.io/" />
-    <script src="/injectFavicon.js"></script>
-    <script src="/main.js"></script>
+    <meta property="og:title" content="Cake Not Found" />
+    <meta property="og:description" content="Error 404" />
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="https://buggem.github.io/" />
+    <style>
+      html {
+        background: #000000;
+      }
+      .cake {
+        width: 30%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <img src="/Cake.webp" style="
-      width:30%;
-      left:50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      position: fixed;
-      text-align: center;
-    "/>
+    <img class="cake" src="/Cake.webp"/>
     <script id="so-answer38796843">
       /*
        * Code from https://stackoverflow.com/a/38796843/
